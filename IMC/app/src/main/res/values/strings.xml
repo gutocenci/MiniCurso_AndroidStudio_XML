@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">funciona</string>
+    <string name="sexo">Sexo</string>
+    <string name="calculadora_imc">CALCULADORA IMC</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="calcular">Calcular</string>
+    <string name="saude">Saude</string>
+    <string name="seu_imc_e_de">Seu IMC e de:</string>
+    <string name="seu_peso_de">Seu Peso é de :</string>
+    <string name="result">Result</string>
+    <string name="resultpeso">resultpeso</string>
+    <string name="resultimc">resultIMC</string>
+    <string name="tresultimc">Tresultimc</string>
+</resources>
