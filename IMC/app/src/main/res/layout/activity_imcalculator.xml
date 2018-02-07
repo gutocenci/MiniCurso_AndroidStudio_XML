@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gustavocenci.imc.IMCalculator">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="@string/calculadora_imc"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        tools:text="CALCULADORA IMC" />
+
+    <TextView
+        android:id="@+id/textViewSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/sexo"
+        tools:text="Sexo"
+        android:textSize="20sp"
+        android:layout_below="@+id/textViewTitulo"
+        android:layout_toLeftOf="@+id/radioGroupSexo"
+        android:layout_toStartOf="@+id/radioGroupSexo"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        tools:ignore="RtlHardcoded" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroupSexo"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textViewSexo"
+        android:layout_alignRight="@+id/buttonCalcular"
+        android:layout_alignEnd="@+id/buttonCalcular">
+
+        <RadioButton
+            android:id="@+id/radioMasculino"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="@string/masculino"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/radioFeminino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:text="@string/feminino"
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewSexo"
+        android:layout_alignStart="@+id/textViewSexo"
+        android:layout_below="@+id/radioGroupSexo"
+        android:layout_marginTop="32dp"
+        android:text="@string/altura"
+        tools:text="Altura"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textViewPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAltura"
+        android:layout_alignStart="@+id/textViewAltura"
+        android:layout_below="@+id/editTextAltura"
+        android:layout_marginTop="18dp"
+        android:text="@string/peso"
+        tools:text="Peso"
+        android:textSize="20sp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/editTextAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/textViewAltura"
+        android:layout_toRightOf="@+id/textViewSaude"
+        android:layout_toEndOf="@+id/textViewSaude"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/textViewPeso"
+        android:layout_alignLeft="@+id/editTextAltura"
+        android:layout_alignStart="@+id/editTextAltura" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPeso"
+        android:layout_centerHorizontal="true"
+        android:elevation="0dp"
+        android:text="@string/calcular"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:ignore="UnusedAttribute"
+        android:background="@drawable/modelo_mxl"/>
+
+    <TextView
+        android:id="@+id/textViewIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seu_peso_de"
+        tools:text="Seu Peso é de :"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textViewpeso"
+        android:layout_alignLeft="@+id/textViewpeso"
+        android:layout_alignStart="@+id/textViewpeso" />
+
+    <TextView
+        android:id="@+id/textViewpeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seu_imc_e_de"
+        tools:text="Seu IMC e de:"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/textViewSaude"
+        android:layout_alignLeft="@+id/textViewPeso"
+        android:layout_alignStart="@+id/textViewPeso" />
+
+    <TextView
+        android:id="@+id/textViewSaude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewpeso"
+        android:layout_alignStart="@+id/textViewpeso"
+        android:layout_below="@+id/buttonCalcular"
+        android:layout_marginTop="16dp"
+        android:text="@string/saude"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextAltura"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textViewTitulo"
+        android:layout_toRightOf="@+id/textViewTitulo"
+        app:srcCompat="@drawable/download"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewresultimc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewIMC"
+        android:layout_toEndOf="@+id/textViewIMC"
+        android:layout_toRightOf="@+id/textViewIMC"
+        android:text="APARECAAAA"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewresultepeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewIMC"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/textViewIMC"
+        android:layout_toRightOf="@+id/textViewIMC"
+        android:text="APARECAAAA"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
